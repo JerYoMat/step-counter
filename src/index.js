@@ -5,9 +5,11 @@ import { Provider } from 'react-redux';
 import StepCounter from './StepCounter';
 import 'bootstrap/dist/css/bootstrap.css';
 
-export const INCREMENT = 'INCREMENT'
+export const INCREMENT = 'INCREMENT'  //Makes reducer more resilient by throwing error 
 export const RESET = 'RESET'
 
+
+//use function(action creator) that returns action instead of pluggin in action directly
 export function increment() {
   return { type: INCREMENT };
 }

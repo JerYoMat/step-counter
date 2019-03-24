@@ -29,10 +29,10 @@ function mapStateToProps(state) {
   }
 }
 
-const mapDispatchToProps = {
-  increment,
-  reset
-};
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  increment: () => dispatch(increment(ownProps)),
+  reset: () => dispatch(reset(ownProps))
+});
 
 export default connect(
   mapStateToProps,
